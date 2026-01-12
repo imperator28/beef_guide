@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import CowMap from './components/CowMap';
 import DetailPanel from './components/DetailPanel';
+import AppIcon from './components/AppIcon';
 import { BEEF_CUTS } from './constants';
 import { BeefCut } from './types';
-import { ShoppingCart, Info, ListFilter } from 'lucide-react';
+import { Info, ListFilter } from 'lucide-react';
 
 const App: React.FC = () => {
   const [selectedCutId, setSelectedCutId] = useState<string | null>(null);
@@ -18,8 +19,8 @@ const App: React.FC = () => {
       <header className="bg-stone-900 text-white sticky top-0 z-50 shadow-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center space-x-3">
-             <div className="bg-red-600 p-1.5 rounded">
-                <ShoppingCart size={20} className="text-white" />
+             <div className="bg-red-600 p-1.5 rounded-lg shadow-sm">
+                <AppIcon className="w-6 h-6 text-white" />
              </div>
              <div>
                 <h1 className="text-lg font-bold tracking-wide">BEEFGUIDE</h1>

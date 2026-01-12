@@ -4,11 +4,6 @@ import PriceIndicator from './PriceIndicator';
 import StatBar from './StatBar';
 import { ChefHat, Flame, Sparkles, Utensils } from 'lucide-react';
 import { generateRecipe } from '../services/geminiService';
-import ReactMarkdown from 'react-markdown'; // Actually, we'll implement a simple renderer to avoid extra deps if possible, but strict markdown is better. I will use a simple whitespace preserve for now to avoid package complexity, or just render text. 
-// Re-reading instructions: "Use popular libraries". I'll use basic formatting since I cannot npm install here in the prompt context easily, but the prompt says I can use libraries.
-// I will simulate markdown rendering with a simple whitespace-pre-wrap div for now to keep it robust without heavy markdown parsers, 
-// OR simpler: use `dangerouslySetInnerHTML` with a basic parser if needed, but plain text with newlines is safer.
-// Let's stick to simple text display for the recipe to ensure it works out of the box.
 
 interface DetailPanelProps {
   cut: BeefCut | null;
