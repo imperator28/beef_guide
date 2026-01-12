@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { BeefCut } from '../types';
 import PriceIndicator from './PriceIndicator';
 import StatBar from './StatBar';
-import { ChefHat, Flame, Sparkles, Utensils } from 'lucide-react';
+import { ChefHat, Sparkles, Utensils } from 'lucide-react';
 import { generateRecipe } from '../services/geminiService';
 
 interface DetailPanelProps {
